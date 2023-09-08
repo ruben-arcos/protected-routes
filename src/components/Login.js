@@ -22,8 +22,13 @@ const Login = () => {
 
   const login = (e) => {
     e.preventDefault();
-    // set cookie here
+
+    // check db and verify uname and pwd hash
+    // if true, generate the siged token
+    // set cookie here only if I have signed on 
     // set loggedIn = true and max-age = 60*1000 (one minute)
+
+    document.cookie = "loggedIn=ture;max-age=60*1000"
 
     navigate("/");
   };
