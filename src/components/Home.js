@@ -1,12 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Card, CardContent, CardActions, Divider } from '@mui/material'
-import cars from '../cars.json'
+//import cars from '../cars.json'
 
-const Home = () => {
-    console.log('CARS', cars)
+const Home = (props) => {
+    // console.log('CARS', props.cars)
+    const cars = props.cars
+    
     return (
+
         <div className="card-container">
+
             {cars.map((car, idx) => (
                 <Card key={idx} className="card">
                     <CardContent className="text-gray">
